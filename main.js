@@ -1,11 +1,11 @@
 // Simple interest (單利)
 function calSimpleInterest(deposit, interestRate, years) {
-    return deposit * interestRate * years;
+  return deposit * interestRate * years;
 }
 
 // Compound interest (複利)
 function calCompoundInterest(deposit, interestRate, years) {
-    return deposit * Math.pow((1 + interestRate), years) - deposit;
+  return deposit * Math.pow((1 + interestRate), years) - deposit;
 }
 
 /**
@@ -16,13 +16,13 @@ function calCompoundInterest(deposit, interestRate, years) {
  * @return {number} The number of bit 1.
  */
 function countBitHammingWeight(num, bit) {
-    let count = 0;
-    const mask = 1;
-    for (i = 0; i < bit; i++) {
-      if ((mask & num) != 0) {
-        count++;
-      }
-      num >>= 1;
+  let count = 0;
+  const mask = 1;
+  for (i = 0; i < bit; i++) {
+    if ((mask & num) != 0) {
+      count++;
     }
-    return count;
+    num >>= 1;
   }
+  return count;
+}
